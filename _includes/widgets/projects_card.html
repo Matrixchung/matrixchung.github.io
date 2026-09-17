@@ -1,0 +1,10 @@
+<section id="projects" class="my-3 p-0 bg-white shadow-sm rounded-xl" aria-labelledby="projects-heading">
+    <h6 id="projects-heading" class="border-bottom border-gray p-3 mb-0">
+        <i class="fas fa-code" aria-hidden="true"></i> Projects
+    </h6>
+    {% for item in include.projects %}
+        {% include widgets/project_item.html item=item hide_bottom_border=forloop.last %}
+    {% else %}
+    <p class="p-3 mb-0 small text-muted">Project details coming soon.</p>
+    {% endfor %}
+</section>

@@ -19,7 +19,7 @@
 
                         <div class="d-flex">
                             <div class="h1 font-weight-normal">
-                                {{ site.data.profile.primary_name }} <small>{{ site.data.profile.secondary_name }}</small>
+                                {{ site.data.profile.primary_name }} <small class="profile-secondary-name">{{ site.data.profile.secondary_name }}</small>
                             </div>
                             {% if site.data.profile.portrait_url %}
                             <div class="ml-auto d-md-none">
@@ -91,6 +91,12 @@
                         {% if site.data.profile.orcid %}
                         <a class="pr-3 no-break" target="_blank" href="https://orcid.org/{{ site.data.profile.orcid }}">
                             <i class="fab fa-orcid"></i> ORCID
+                        </a>
+                        {% endif %}
+
+                        {% if site.data.profile.bilibili %}
+                        <a class="pr-3 no-break" target="_blank" rel="noopener noreferrer" href="{{ site.data.profile.bilibili }}">
+                            <i class="fab fa-bilibili"></i> Bilibili
                         </a>
                         {% endif %}
                     </div>
