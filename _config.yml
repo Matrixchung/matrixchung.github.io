@@ -18,7 +18,7 @@ baseurl: "" # the subpath of your site, e.g. /blog
 
 # Image CDN. Pin this to the commit containing the published images after release.
 asset_cdn:
-  enabled: false
+  enabled: true
   base_url: "https://cdn.jsdelivr.net/gh/Matrixchung/matrixchung.github.io@c46e09f"
 
 # Build settings
