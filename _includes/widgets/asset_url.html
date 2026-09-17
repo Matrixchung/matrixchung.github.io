@@ -1,0 +1,8 @@
+{%- assign asset_path = include.path | default: '' -%}
+{%- if asset_path contains '://' -%}
+{{ asset_path }}
+{%- elsif site.asset_cdn.enabled and asset_path contains '/assets/' -%}
+{{ site.asset_cdn.base_url }}{{ asset_path }}
+{%- else -%}
+{{ asset_path | relative_url }}
+{%- endif -%}

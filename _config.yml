@@ -16,6 +16,11 @@
 url: "https://matrixchung.github.io"
 baseurl: "" # the subpath of your site, e.g. /blog
 
+# Image CDN. Pin this to the commit containing the published images after release.
+asset_cdn:
+  enabled: true
+  base_url: "https://cdn.jsdelivr.net/gh/Matrixchung/matrixchung.github.io@main"
+
 # Build settings
 markdown: kramdown
 plugins:

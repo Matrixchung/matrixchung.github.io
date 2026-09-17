@@ -8,14 +8,14 @@
                         <!-- When the screen is wider than md, float the portrait on the right -->
                         <div class="figure d-none d-md-block">
                             <img 
-                                src="{{ site.data.profile.portrait_url | relative_url }}" 
+                                src="{% include widgets/asset_url.html path=site.data.profile.portrait_url %}" 
                                 class="figure-img img-fluid" 
                                 data-toggle="tooltip" 
                                 data-placement="top" 
                                 title="{{ site.data.profile.portrait_caption }}">
                         </div>
                         <div class="mb-3 d-md-none text-center">
-                            <img src="{{ site.data.profile.portrait_url | relative_url }}" class="rounded-circle" style="max-width: 50%;" alt="Portrait">
+                            <img src="{% include widgets/asset_url.html path=site.data.profile.portrait_url %}" class="rounded-circle" style="max-width: 50%;" alt="Portrait">
                         </div>
                         {% endif %}
                     </div>
@@ -103,7 +103,7 @@
     <div class="modal-dialog modal-sm">
         <div class="modal-content">
             <div class="modal-body p-0">
-                <img src="{{ site.data.profile.wechat_qrcode | relative_url }}" class="img-fluid">
+                <img src="{% include widgets/asset_url.html path=site.data.profile.wechat_qrcode %}" class="img-fluid">
             </div>
             {% if site.data.profile.wechat_prompt %}
             <div class="modal-body p-1">

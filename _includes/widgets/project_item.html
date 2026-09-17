@@ -2,7 +2,7 @@
 <article class="row no-gutters {% unless include.hide_bottom_border %}border-bottom{% endunless %} border-gray">
     {% if item.cover %}
     <div class="col-12 col-md-3 col-xl-2 p-3">
-        <img src="{{ item.cover | relative_url }}" alt="{{ item.title | escape }}" class="w-100 rounded-sm" loading="lazy">
+        <img src="{% include widgets/asset_url.html path=item.cover %}" alt="{{ item.title | escape }}" class="w-100 rounded-sm" loading="lazy">
     </div>
     {% endif %}
     <div class="{% if item.cover %}col-12 col-md-9 col-xl-10 p-3 pl-md-0{% else %}col-12 p-3{% endif %}">
